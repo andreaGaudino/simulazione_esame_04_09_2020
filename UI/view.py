@@ -18,7 +18,7 @@ class View(ft.UserControl):
 
     def load_interface(self):
         # title
-        self._title = ft.Text("simulazione esame 24/01/2024", color="blue", size=24)
+        self._title = ft.Text("simulazione esame 04/09/2020", color="blue", size=24)
         self._page.controls.append(self._title)
 
         #row1
@@ -30,8 +30,7 @@ class View(ft.UserControl):
         self._page.add(row1)
 
         #row 2
-
-        self.btnFilmGradoMassimo = ft.ElevatedButton(text="Film di grado massimo", on_click=self._controller.handleGradoMassimo)
+        self.btnFilmGradoMassimo = ft.ElevatedButton(text="Film di grado massimo", on_click=self._controller.handleGradoMassimo, disabled=True)
         row2 = ft.Row([
                        ft.Container(self.btnFilmGradoMassimo, width=300)],
                       alignment=ft.MainAxisAlignment.CENTER)
